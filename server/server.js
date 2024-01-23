@@ -24,7 +24,13 @@ connectDB();
 const app = express();
 
 // middlewares
-app.use(cors());
+app.use(cors(
+ {
+    origin: ["https://ecommerce-app-api.vercel.app/"],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+    credentials: true
+  }
+));
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "./client/build")));
