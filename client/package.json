@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://ecommerce-app-server-virid.vercel.app/",
+  "proxy": "https://ecommerce-app-server-virid.vercel.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
