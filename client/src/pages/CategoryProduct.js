@@ -23,7 +23,7 @@ const CategoryProduct = () => {
   const getProductByCategory = async () => {
     try {
       const { data } = await axios.get(
-        `https://ecommerce-app-server-virid.vercel.app/api/v1/product/product-category/${params.slug}`
+        `http://localhost:8100/api/v1/product/product-category/${params.slug}`
       );
       setProducts(data?.products);
       setCategory(data?.category);
@@ -51,7 +51,7 @@ const CategoryProduct = () => {
                   key={p._id}
                 >
                   <img
-                    src={`https://ecommerce-app-server-virid.vercel.app/api/v1/product/product-photo/${p._id}`}
+                    src={`http://localhost:8100/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                   />

@@ -15,7 +15,7 @@ const ForgetPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://ecommerce-app-server-virid.vercel.app/api/v1/auth/forget-password", {
+      const res = await axios.post("http://localhost:8100/api/v1/auth/forget-password", {
         email,
         newPassword,
         answer,

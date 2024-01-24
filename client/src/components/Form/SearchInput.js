@@ -10,7 +10,7 @@ const SearchInput = () => {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `https://ecommerce-app-server-virid.vercel.app/api/v1/product/search/${values.keyword}`
+        `http://localhost:8100/api/v1/product/search/${values.keyword}`
       );
       setValues({ ...values, results: data });
       navigate("/search");
