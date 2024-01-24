@@ -25,7 +25,7 @@ const app = express();
 
 // middlewares
 app.use(cors({
-  origin: 'https://ecommerce-app-nine-phi.vercel.app',
+  origin: 'https://ecommerce-app-nine-phi.vercel.app/',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
