@@ -18,7 +18,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8100/api/v1/product/single-product/${params.slug}`
+        `https://ecommerce-app-server-virid.vercel.app/api/v1/product/single-product/${params.slug}`
       );
       setProduct(data?.product);
       getSimilarProduct(data?.product._id, data?.product.category._id);
@@ -36,7 +36,7 @@ const ProductDetails = () => {
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8100/api/v1/product/related-product/${pid}/${cid}`
+        `https://ecommerce-app-server-virid.vercel.app/api/v1/product/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
     } catch (error) {
@@ -49,7 +49,7 @@ const ProductDetails = () => {
       <div className="row container product-details">
         <div className="col md-6">
           <img
-            src={`http://localhost:8100/api/v1/product/product-photo/${product._id}`}
+            src={`https://ecommerce-app-server-virid.vercel.app/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
             alt={product.name}
             height="400"
@@ -94,7 +94,7 @@ const ProductDetails = () => {
           {relatedProducts?.map((p) => (
             <div key={p._id} className="card m-2" style={{ width: "18rem" }}>
               <img
-                src={`http://localhost:8100/api/v1/product/product-photo/${p._id}`}
+                src={`https://ecommerce-app-server-virid.vercel.app/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top"
                 alt={p.name}
               />

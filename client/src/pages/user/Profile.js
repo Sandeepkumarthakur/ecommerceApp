@@ -28,7 +28,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       console.log("first")
-      const { data } = await axios.put("http://localhost:8100/api/v1/auth/profile", {
+      const { data } = await axios.put("https://ecommerce-app-server-virid.vercel.app/api/v1/auth/profile", {
         name,
         email,
         password,
