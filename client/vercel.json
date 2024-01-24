@@ -1,0 +1,6 @@
+{"rewrites": [
+    {
+        "source": "/(.*)",
+        "destination": "https://ecommerce-app-server-virid.vercel.app"
+    }
+]}
