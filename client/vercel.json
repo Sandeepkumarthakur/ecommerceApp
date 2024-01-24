@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "https://ecommerce-app-server-virid.vercel.app/:path*"
+      "destination": "https://ecommerce-app-server-virid.vercel.app"
     }
   ]
 }
